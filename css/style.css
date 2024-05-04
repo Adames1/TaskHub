@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.75)),
+    url(/images/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* botones */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  padding: 5px 12px;
+  cursor: pointer;
+  background-color: #3464e7;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.buttons .uil {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* header */
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 0;
+  width: 100%;
+  height: 56px;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo .uil {
+  background-color: #1950e6;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* select background */
+.content__background {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+/* select background -- button */
+.button__bg {
+  cursor: pointer;
+  font-size: 1.075rem;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 2px 14px;
+  background-color: #fff;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.button__bg .uil {
+  font-size: 1.75rem;
+  transition: transform 0.4s ease-in-out;
+}
+
+.button__bg.open .uil {
+  transform: rotate(180deg);
+}
+
+.select__background {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  display: none;
+  width: max-content;
+  height: auto;
+  gap: 5px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+}
+
+.select__background.open {
+  display: flex;
+}
+
+.select__background img {
+  width: 180px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.select__background img:hover {
+  transform: scale(1.05);
+}
+
+.welcome {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* menu actions */
+.menu__actions {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.menu__actions h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+/* menu actions -- content actions */
+.content__actions {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  background-color: #ffffff90;
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.group__input {
+  background-color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.group__input .uil {
+  font-size: 1.2rem;
+  color: #161616;
+}
+
+.group__input input {
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: #161616;
+}
+
+/* menu actions -- progress */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.progress > div {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.progress > div .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress > div .head span {
+  display: inline-block;
+  font-weight: 500;
+  color: #161616;
+}
+
+.progress > div .bar {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.progress > div .bar span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1950e6;
+  border-radius: 20px;
+}
+
+.progress > div:nth-child(2) .bar span {
+  background-color: #ce19e6;
+}
+
+.progress > div:nth-child(3) .bar span {
+  background-color: #e61949;
+}
+
+.progress > div:nth-child(4) .bar span {
+  background-color: #08d538;
+}
+
+/* contenido principal */
+.main {
+  margin-top: 30px;
+  width: 100%;
+  height: max-content;
+}
+
+.content__boards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 10px;
+}
+
+/* contenido principal -- tableros */
+.content__boards .board {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  padding: 20px;
+  height: max-content;
+}
+
+.content__boards .board h2 {
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+  color: #161616;
+}
+
+/* tableros -- tareas o proyectos */
+.board .task {
+  background-color: #e77828;
+  color: #161616;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.board .task p {
+  width: 100%;
+  height: auto;
+  outline: none;
+  border: none;
+  font-weight: 500;
+}
+
+.board .task .info__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.info__task .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info__task .actions .uil {
+  display: inline-block;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.list__task span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* tableros -- formulario */
+.content__form {
+  display: none;
+}
+
+.content__form form {
+  display: grid;
+  align-items: center;
+  grid-gap: 8px;
+  margin-bottom: 10px;
+}
+
+.content__form form .uil {
+  font-size: 1.47rem;
+  cursor: pointer;
+}
+
+.content__form form textarea {
+  width: 100%;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  outline: none;
+  font-size: 1.01rem;
+  color: #161616;
+  border: 1px solid #161616;
+  border-radius: 10px;
+}
+
+/* responsive design */
+@media screen and (max-width: 1200px) {
+  .progress {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .content__actions {
+    grid-template-columns: auto;
+  }
+
+  .content__actions div .group__input {
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu__actions {
+    padding-top: 30px;
+  }
+
+  .menu__actions h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .button__bg span {
+    display: none;
+  }
+
+  .menu__actions h1 {
+    font-size: 1.5rem;
+  }
+
+  .content__boards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
