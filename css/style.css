@@ -58,6 +58,24 @@ li {
   font-weight: 600;
 }
 
+/* notificacion del desarrollador */
+.reminder {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 400px;
+  transform: translate(-50%);
+}
+
+.reminder span {
+  display: inline-block;
+  margin: 8px 0 12px 0;
+}
+
 /* header */
 header {
   position: relative;
