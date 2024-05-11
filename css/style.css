@@ -329,6 +329,10 @@ header {
   margin-bottom: 10px;
 }
 
+.board .task.over {
+  border: 2px dotted #161616;
+}
+
 .board .task p {
   width: 100%;
   height: auto;

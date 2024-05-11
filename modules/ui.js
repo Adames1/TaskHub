@@ -1,14 +1,22 @@
 // importar las funciones
 import { deleteTask, getTask, editTask } from "./task.js";
+import {
+  handleDragStart,
+  handleDragEnd,
+  handleDrop,
+  handleDragOver,
+  handleDragEnter,
+  handleDragLeave,
+} from "./dragDrop.js";
 
 // funcion para mostrar la tarea en el documento
 export function renderTask() {
   const listTask = document.querySelector(".list__task");
-  listTask.innerHTML = "";
+  listTask.innerHTML = '';
 
   getTask().forEach((task, index) => {
     let elementTask = `
-            <div class="task">
+            <div draggable="true" class="task" data-index="${index}">
                 <p data-index="${index}">${task.content}</p>
                 <div class="info__task">
                     <span class="date__task">${task.date}</span>
@@ -52,5 +60,24 @@ export function renderTask() {
         editIcon.classList.replace("uil-save", "uil-pen");
       }
     });
+  });
+
+  // drag & drop
+  let tasks = document.querySelectorAll(".task");
+  let all_list= document.querySelectorAll(".list__task");
+
+  tasks.forEach((task) => {
+    task.addEventListener("dragstart", handleDragStart);
+    task.addEventListener("dragend", handleDragEnd);
+    task.addEventListener("dragover", handleDragOver);
+    task.addEventListener("dragenter", handleDragEnter);
+    task.addEventListener("dragleave", handleDragLeave);
+  });
+
+  all_list.forEach((list) => {
+    list.addEventListener("dragover", handleDragOver);
+    list.addEventListener("dragenter", handleDragEnter);
+    list.addEventListener("dragleave", handleDragLeave);
+    list.addEventListener("drop", handleDrop);
   });
 }

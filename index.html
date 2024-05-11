@@ -1,134 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskHub</title>
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="nav container">
-        <a href="#" class="logo">
-          <i class="uil uil-check"></i>
-          TaskHub
-        </a>
-        <div class="content__background">
-          <button type="button" class="button__bg">
-            <span>Background</span>
-            <i class="uil uil-angle-down"></i>
-          </button>
-          <div class="select__background">
-            <img src="./images/bg1.jpg" alt="Background 1" />
-            <img src="./images/bg2.jpg" alt="Background 2" />
-            <img src="./images/bg3.jpg" alt="Background 3" />
-            <img src="./images/bg4.jpg" alt="Background 4" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskHub</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <i class="uil uil-check"></i>
+        TaskHub
+      </a>
+      <div class="content__background">
+        <button type="button" class="button__bg">
+          <span>Background</span>
+          <i class="uil uil-angle-down"></i>
+        </button>
+        <div class="select__background">
+          <img src="./images/bg1.jpg" alt="Background 1" />
+          <img src="./images/bg2.jpg" alt="Background 2" />
+          <img src="./images/bg3.jpg" alt="Background 3" />
+          <img src="./images/bg4.jpg" alt="Background 4" />
+        </div>
+      </div>
+      <span class="welcome"> <span>Buen Dia</span>, Argenis Adames </span>
+    </nav>
+  </header>
+
+  <section class="menu__actions">
+    <div class="container">
+      <h1>TABLERO DE TAREAS & PROYECTOS</h1>
+      <div class="content__actions">
+        <div>
+          <div class="group__input">
+            <i class="uil uil-search"></i>
+            <input type="search" placeholder="Buscar tarea..." />
           </div>
         </div>
-        <span class="welcome"> <span>Buen Dia</span>, Argenis Adames </span>
-      </nav>
-    </header>
-
-    <section class="menu__actions">
-      <div class="container">
-        <h1>TABLERO DE TAREAS & PROYECTOS</h1>
-        <div class="content__actions">
-          <div>
-            <div class="group__input">
-              <i class="uil uil-search"></i>
-              <input type="search" placeholder="Buscar tarea..." />
+        <div>
+          <div class="progress">
+            <div>
+              <div class="head">
+                <span>En proceso</span>
+                <span>80%</span>
+              </div>
+              <span class="bar">
+                <span></span>
+              </span>
+            </div>
+            <div>
+              <div class="head">
+                <span>Pausadas</span>
+                <span>80%</span>
+              </div>
+              <span class="bar">
+                <span></span>
+              </span>
+            </div>
+            <div>
+              <div class="head">
+                <span>Completadas</span>
+                <span>80%</span>
+              </div>
+              <span class="bar">
+                <span></span>
+              </span>
             </div>
           </div>
-          <div>
-            <div class="progress">
-              <div>
-                <div class="head">
-                  <span>En proceso</span>
-                  <span>80%</span>
-                </div>
-                <span class="bar">
-                  <span></span>
-                </span>
-              </div>
-              <div>
-                <div class="head">
-                  <span>Pausadas</span>
-                  <span>80%</span>
-                </div>
-                <span class="bar">
-                  <span></span>
-                </span>
-              </div>
-              <div>
-                <div class="head">
-                  <span>Completadas</span>
-                  <span>80%</span>
-                </div>
-                <span class="bar">
-                  <span></span>
-                </span>
-              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contenido principal -->
+  <main class="main">
+    <section class="section__tasks">
+      <div class="container">
+        <div class="content__boards">
+          <div class="board">
+            <h2>Lista</h2>
+            <div class="list__task">
+              <span>No existe tareas...</span>
+            </div>
+            <div class="content__form">
+              <form>
+                <i class="uil uil-times" id="btn-close"></i>
+                <textarea placeholder="¿Que quieres escribir?" id="type-text"></textarea>
+                <button type="submit" class="buttons">Guardar</button>
+              </form>
+            </div>
+            <button type="button" class="buttons" id="btn-add">
+              Agregar
+              <i class="uil uil-plus"></i>
+            </button>
+          </div>
+
+          <div class="board">
+            <h2>En Proceso</h2>
+            <div class="list__task">
+              <span class="indicator">Arrastra aqui lo que haz iniciado...</span>
+            </div>
+          </div>
+
+          <div class="board">
+            <h2>Pausadas</h2>
+            <div class="list__task">
+              <span class="indicator">Arrastra aqui lo que haz pausado...</span>
+            </div>
+          </div>
+
+          <div class="board">
+            <h2>Completadas</h2>
+            <div class="list__task">
+              <span class="indicator">Arrastra aqui lo que haz completado...</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- contenido principal -->
-    <main class="main">
-      <section class="section__tasks">
-        <div class="container">
-          <div class="content__boards">
-            <div class="board">
-              <h2>Lista</h2>
-              <div class="list__task">
-                <span>No existe tareas...</span>
-              </div>
-              <div class="content__form">
-                <form>
-                  <i class="uil uil-times" id="btn-close"></i>
-                  <textarea
-                    placeholder="¿Que quieres escribir?"
-                    id="type-text"
-                  ></textarea>
-                  <button type="submit" class="buttons">Guardar</button>
-                </form>
-              </div>
-              <button type="button" class="buttons" id="btn-add">
-                Agregar
-                <i class="uil uil-plus"></i>
-              </button>
-            </div>
+  <script type="module" src="index.js"></script>
+</body>
 
-            <div class="board">
-              <h2>En Proceso</h2>
-              <div class="list__task">
-                <span>Arrastra aqui lo que haz iniciado...</span>
-              </div>
-            </div>
-
-            <div class="board">
-              <h2>Pausadas</h2>
-              <div class="list__task">
-                <span>Arrastra aqui lo que haz pausado...</span>
-              </div>
-            </div>
-
-            <div class="board">
-              <h2>Completadas</h2>
-              <div class="list__task">
-                <span>Arrastra aqui lo que haz completado...</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script type="module" src="index.js"></script>
-  </body>
 </html>
