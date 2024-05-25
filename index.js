@@ -53,20 +53,20 @@ buttonBg.addEventListener("click", () => {
 });
 
 // alerta para indicar que la app esta en desarrollo
-// document.addEventListener("DOMContentLoaded", () => {
-//   let reminder = `
-//   <div class="reminder">
-//     <h2>AVISO IMPORTANTE</h2>
-//     <span>Esta aplicación se encuentra en desarrollo, pero para mostrar un poco mis habilidades ha sido agregada al portafolio. Disculpe los inconvenientes.</span>
-//     <button class="buttons">De acuerdo</button>
-//   </div>`;
+document.addEventListener("DOMContentLoaded", () => {
+  let reminder = `
+  <div class="reminder">
+    <h2>AVISO IMPORTANTE</h2>
+    <span>Esta aplicación se encuentra en desarrollo, pero para mostrar un poco mis habilidades ha sido agregada al portafolio. Disculpe los inconvenientes.</span>
+    <button class="buttons">De acuerdo</button>
+  </div>`;
 
-//   let body = document.querySelector("body");
-//   body.insertAdjacentHTML("beforeend", reminder);
+  let body = document.querySelector("body");
+  body.insertAdjacentHTML("beforeend", reminder);
 
-//   // remover notificacion con click en boton
-//   let button = document.querySelector(".reminder button");
-//   button.addEventListener("click", () => {
-//     button.parentElement.remove();
-//   });
-// });
+  // remover notificacion con click en boton
+  let button = document.querySelector(".reminder button");
+  button.addEventListener("click", () => {
+    button.parentElement.remove();
+  });
+});

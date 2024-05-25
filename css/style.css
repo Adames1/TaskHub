@@ -339,6 +339,8 @@ header {
   outline: none;
   border: none;
   font-weight: 500;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .board .task .info__task {
